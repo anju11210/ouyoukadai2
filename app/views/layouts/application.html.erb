@@ -11,12 +11,13 @@
   <body>
     <%= render 'layouts/header' %>
       <main>
-        <p>
+        <p id="notice">
           <% if user_signed_in? %>
-            <%= render 'layouts/search' %>
+          <div class="d-flex justify-content-center mb-2">
+           <%= render 'layouts/search' %>
+          </div>
           <% end %>
-        </p>
-        <p id="notice"><%= yield %></p>
+        <%= yield %></p>
       </main>
     <%= render 'layouts/footer' %>
   </body>
